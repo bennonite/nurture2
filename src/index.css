@@ -47,6 +47,7 @@ a {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-bottom: 0.5em;
 }
 a:hover {
   border-color: #646cff;
