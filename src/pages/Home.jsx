@@ -4,7 +4,7 @@ function Home(props){
     return (
         <div>
             <h1>Home Page</h1>
-            <Button switchTo={props.switchTo} to="identity" />
+            <Button switchTo={props.switchTo} title="Identity" to="identities" />
         </div>
     )
 }

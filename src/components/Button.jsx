@@ -1,10 +1,10 @@
 
 function Button(props){
 
-    let { switchTo, to } = props;
+    let { switchTo, to, title } = props;
 
     return (
-        <button onClick={() => switchTo(to)}>{to}</button>
+        <button onClick={() => switchTo(to)}>{title}</button>
     )
 }
 

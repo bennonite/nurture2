@@ -55,6 +55,16 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.list {
+  display:flex;
+  flex-direction:column;
+  margin-bottom:2rem;
+}
+
+.list button {
+  margin-bottom:1rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

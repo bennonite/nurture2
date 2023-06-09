@@ -1,0 +1,28 @@
+{
+    "short_name": "Nurture",
+    "name": "Nurture",
+    "icons": [
+      {
+        "src": "./logo-vector.svg",
+        "type": "image/svg+xml",
+        "sizes": "512x512"
+      },
+      {
+        "src": "./logo-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "./logo-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "id": ".",
+    "start_url": ".",
+    "background_color": "#FFF",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#55AC68",
+    "description": "Grow lasting change"
+  }

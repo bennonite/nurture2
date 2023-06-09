@@ -1,13 +1,48 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './pages/Home'
-import Identity from './pages/Identity'
+import Identities from './pages/Identities'
+import Values from './pages/Values';
 
 function App() {
   const [count, setCount] = useState(0)
   const [activePage, setActivePage] = useState('home')
+  const [activeIdentity, setActiveIdentity] = useState('')
+  const [identities, setIdentities] = useState([]);
+
+  useEffect(() => {
+    let data = [
+      { slug: 'husband', 
+        title: 'Husband',
+        values: [
+          {
+            slug: 'loving',
+            title: 'Loving',
+            habits: [
+              { 
+                slug: 'turn-toward-bids',
+                title: 'Turn toward bids'
+              }
+            ]
+          },
+          {
+            slug: 'encouraging',
+            title: 'Encouraging',
+            habits: [
+              { 
+                slug: 'a-compliment-a-day',
+                title: 'A compliment a day'
+              }
+            ]
+          }
+        ]
+      },
+      { slug: 'developer', title: 'Developer' },
+    ]
+    setIdentities(data)
+  }, [])
 
   function switchTo(page){
     setActivePage(page)
@@ -18,8 +53,12 @@ function App() {
       case 'home':
         return <Home switchTo={switchTo} />
         break;
-      case 'identity':
-        return <Identity switchTo={switchTo} />
+      case 'identities':
+        if (activeIdentity) {
+          return <Values activeIdentity={activeIdentity} identities={identities} switchTo={switchTo} />
+        } else {
+          return <Identities setActiveIdentity={setActiveIdentity} identities={identities} switchTo={switchTo} />
+        }
         break;
       default :
         return <Home />
@@ -28,29 +67,7 @@ function App() {
 
   return (
     <>
-
       <ActivePage />
-
-      {/* <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div> */}
-
-      {/* <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
     </>
   )
 }
