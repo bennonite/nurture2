@@ -1,11 +1,11 @@
-import Button from "../components/Button";
+import { Link } from 'react-router-dom'
 
 function Home(props){
     return (
-        <div>
-            <h1>Home Page</h1>
-            <Button switchTo={props.switchTo} title="Identity" to="identities" />
-        </div>
+        <>
+            <div>Home</div>
+            <Link to="identity">Identity</Link>
+        </>
     )
 }
 
