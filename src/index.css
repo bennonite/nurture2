@@ -67,6 +67,37 @@ a:focus-visible {
   margin-bottom:1rem;
 }
 
+.input-button {
+  display:flex;
+  margin-bottom:1rem;
+}
+
+.input-button__input {
+  background-color: #191919;
+  border:1px solid #313586;
+  padding: 14px 16px;
+  border-radius:8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  text-align:center;
+  font-size:1em;
+}
+
+.input-button__button {
+  background: #313586;
+  border:0;
+  padding: 16px 8px;
+  flex:1;
+  font-size:15px;
+  font-weight:700;
+  color: #cccff6;
+}
+
+.input-button__button:hover {
+  cursor:pointer;
+  background: #3a3f9f;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
