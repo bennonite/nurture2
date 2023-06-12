@@ -11,9 +11,6 @@ function IdentityIndex(){
 
     const [ identityField, setIdentityField ] = useState('');
 
-    if (!data) return;
-
-
     function updateIdentity(newId){
         addIdentity(newId)
         setIdentityField('')
@@ -22,10 +19,13 @@ function IdentityIndex(){
     return (
         <>
             <h1>Identity</h1>
-            {
-                data.map( (identity, i) => {
-                    return <Link to={identity.slug} key={`${identity.slug}-${i}`}>{identity.title}</Link>
-                })
+            { data && <> 
+                {
+                    data.map( (identity, i) => {
+                        return <Link to={identity.slug} key={`${identity.slug}-${i}`}>{identity.title}</Link>
+                    })
+                }
+                </>
             }
             <p>-</p>
             <Input 

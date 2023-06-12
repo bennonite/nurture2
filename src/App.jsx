@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     const storedData = window.localStorage.getItem('NURTURE_APP_STATE');
-    if ( storedData !== null && storedData !== undefined && storedData !== [] ) setData(JSON.parse(storedData));
+    if ( storedData !== null ) setData(JSON.parse(storedData));
   }, []);
 
   useEffect(() => {
@@ -52,7 +52,7 @@ function App() {
 
 
   function addIdentity(identity){
-    let newData = [...data];
+    let newData = data === null ? [] : [...data];
     let newIdentity = { title : identity, slug : slugify(identity), values : [] }
     newData.push(newIdentity)
     setData(newData);
