@@ -69,6 +69,10 @@ function App() {
     setData(newData);
   }
 
+  function deleteItem(){
+
+  }
+
   console.log('app render')
 
   return (

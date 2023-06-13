@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
@@ -98,15 +98,23 @@ a:focus-visible {
   background: #3a3f9f;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  a {
-    background-color: #f9f9f9;
-  }
+
+.input-field__input {
+  background-color: #191919;
+  border:1px solid #191919;
+  padding: 14px 16px;
+  border-radius:8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size:1em;
+  width: 20rem;
+  min-height:10rem;
+  max-width:90vw;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin-bottom:2rem;
+}
+
+
+.back {
+  background:none;
 }

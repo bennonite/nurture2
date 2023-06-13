@@ -37,7 +37,7 @@ function IdentityView(){
                 handleField={setValueField} 
                 fieldValue={valueField} 
             />
-            <Link to="./../">Back</Link>
+            <Link to="./../" className="back">Back</Link>
         </>
     )
 }

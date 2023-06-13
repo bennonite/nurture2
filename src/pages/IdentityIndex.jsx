@@ -33,7 +33,7 @@ function IdentityIndex(){
                 handleField={setIdentityField} 
                 fieldValue={identityField} 
             />
-           <Link to="./../">Back</Link>
+           <Link to="./../" className="back">Back</Link>
         </>
     )
 }
